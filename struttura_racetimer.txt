@@ -22,24 +22,31 @@ racetimer/
             │   ├── save_player_name.mcfunction
             │   ├── dashboard/
             │   │   └── setup.mcfunction
-            │   ├── semaphore/
+            │   ├── bossbar_pool/
+            │   │   ├── assign.mcfunction
+            │   │   ├── check_area.mcfunction
+            │   │   ├── debug.mcfunction
+            │   │   ├── release.mcfunction
+            │   │   ├── set_color.mcfunction
+            │   │   ├── set_name_deserto.mcfunction
+            │   │   ├── set_name_savana.mcfunction
+            │   │   ├── set_name_snowy_race.mcfunction
             │   │   ├── setup.mcfunction
-            │   │   ├── start.mcfunction
-            │   │   ├── tick.mcfunction
-            │   │   ├── go.mcfunction
-            │   │   ├── go_deserto.mcfunction
-            │   │   ├── go_savana.mcfunction
-            │   │   ├── go_snowy_race.mcfunction
-            │   │   ├── next_state.mcfunction
-            │   │   ├── light_1.mcfunction
-            │   │   ├── light_2.mcfunction
-            │   │   ├── light_3.mcfunction
-            │   │   ├── light_4.mcfunction
-            │   │   └── light_5.mcfunction
-            │   └── starting_grid/
+            │   │   └── tick.mcfunction
+            │   └── semaphore/
+            │       ├── setup.mcfunction
+            │       ├── start.mcfunction
             │       ├── tick.mcfunction
-            │       ├── not_ready.mcfunction
-            │       └── ready.mcfunction
+            │       ├── go.mcfunction
+            │       ├── go_deserto.mcfunction
+            │       ├── go_savana.mcfunction
+            │       ├── go_snowy_race.mcfunction
+            │       ├── next_state.mcfunction
+            │       ├── light_1.mcfunction
+            │       ├── light_2.mcfunction
+            │       ├── light_3.mcfunction
+            │       ├── light_4.mcfunction
+            │       └── light_5.mcfunction
             ├── select/
             │   ├── deserto.mcfunction
             │   ├── savana.mcfunction
@@ -61,10 +68,12 @@ racetimer/
                 │   ├── reset_pb.mcfunction
                 │   ├── reset_pb_all.mcfunction
                 │   ├── reset_wr.mcfunction
+                │   ├── grid_setup.mcfunction
+                │   ├── grid_clear.mcfunction
+                │   ├── grid.mcfunction
                 │   └── dashboard/
-                │       ├── bossbar_setup.mcfunction
-                │       ├── show.mcfunction
-                │       └── update.mcfunction
+                │       ├── update.mcfunction
+                │       └── update_dynamic.mcfunction
                 ├── savana/
                 │   ├── load.mcfunction
                 │   ├── start.mcfunction
@@ -78,9 +87,10 @@ racetimer/
                 │   ├── reset_pb.mcfunction
                 │   ├── reset_pb_all.mcfunction
                 │   ├── reset_wr.mcfunction
+                │   ├── grid_setup.mcfunction
+                │   ├── grid_clear.mcfunction
+                │   ├── grid.mcfunction
                 │   └── dashboard/
-                │       ├── bossbar_setup.mcfunction
-                │       ├── show.mcfunction
                 │       └── update.mcfunction
                 └── snowy_race/
                     ├── load.mcfunction
@@ -97,41 +107,44 @@ racetimer/
                     ├── reset_pb.mcfunction
                     ├── reset_pb_all.mcfunction
                     ├── reset_wr.mcfunction
-                    ├── dashboard/
-                    │   ├── bossbar_setup.mcfunction
-                    │   ├── show.mcfunction
-                    │   └── update.mcfunction
-                    └── lever/
-                        └── lever_1.mcfunction
+                    ├── grid_setup.mcfunction
+                    ├── grid_clear.mcfunction
+                    ├── grid.mcfunction
+                    └── dashboard/
+                        ├── update.mcfunction
+                        └── update_dynamic.mcfunction
 
-TOTALE FILE: 67
+TOTALE FILE: 71
 - 1 pack.mcmeta
 - 2 tag files (load.json, tick.json)
-- 64 function files (.mcfunction)
+- 68 function files (.mcfunction)
 - 1 loot table file (player_name.json)
 
 STRUTTURA PER TIPO:
 ==================
-- Core functions: 20 file
-- Circuit functions: 47 file
+- Core functions: 25 file
+- Circuit functions: 43 file
 - Tag files: 2 file
 - Loot table: 1 file
 - Pack metadata: 1 file
 
 CIRCUITI DISPONIBILI:
 ====================
-1. DESERTO (14 file + 3 dashboard)
-2. SAVANA (12 file + 3 dashboard)
-3. SNOWY RACE (15 file + 3 dashboard + 1 lever)
+1. DESERTO (16 file + 2 dashboard)
+2. SAVANA (15 file + 1 dashboard)
+3. SNOWY RACE (17 file + 2 dashboard)
 
 NUOVE FUNZIONALITÀ AGGIUNTE:
 ============================
 - admin_menu.mcfunction: Menu amministrativo
 - test_formatting.mcfunction: Test per la formattazione del tempo
 - format_time.mcfunction: Formattazione del tempo
-- starting_grid/: Sistema griglia di partenza
+- bossbar_pool/: Sistema di gestione bossbar con pool
 - show_pb.mcfunction: Visualizzazione personal best
 - reset_pb.mcfunction: Reset personal best
 - reset_pb_all.mcfunction: Reset tutti i personal best
 - reset_wr.mcfunction: Reset world record
-- lever/: Sistema leve per snowy_race 
+- grid_setup.mcfunction: Setup griglia di partenza
+- grid_clear.mcfunction: Pulizia griglia di partenza
+- grid.mcfunction: Gestione griglia di partenza
+- update_dynamic.mcfunction: Aggiornamento dinamico dashboard 
