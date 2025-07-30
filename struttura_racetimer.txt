@@ -1,0 +1,137 @@
+STRUTTURA DATAPACK RACETIMER
+================================
+
+racetimer/
+├── pack.mcmeta
+└── data/
+    ├── minecraft/
+    │   └── tags/
+    │       └── function/
+    │           ├── load.json
+    │           └── tick.json
+    └── racetimer/
+        └── function/
+            ├── load.mcfunction
+            ├── tick.mcfunction
+            ├── admin_menu.mcfunction
+            ├── test_formatting.mcfunction
+            ├── show_records.mcfunction
+            ├── core/
+            │   ├── calculate_time.mcfunction
+            │   ├── format_time.mcfunction
+            │   ├── save_player_name.mcfunction
+            │   ├── dashboard/
+            │   │   └── setup.mcfunction
+            │   ├── semaphore/
+            │   │   ├── setup.mcfunction
+            │   │   ├── start.mcfunction
+            │   │   ├── tick.mcfunction
+            │   │   ├── go.mcfunction
+            │   │   ├── go_deserto.mcfunction
+            │   │   ├── go_savana.mcfunction
+            │   │   ├── go_snowy_race.mcfunction
+            │   │   ├── next_state.mcfunction
+            │   │   ├── light_1.mcfunction
+            │   │   ├── light_2.mcfunction
+            │   │   ├── light_3.mcfunction
+            │   │   ├── light_4.mcfunction
+            │   │   └── light_5.mcfunction
+            │   └── starting_grid/
+            │       ├── tick.mcfunction
+            │       ├── not_ready.mcfunction
+            │       └── ready.mcfunction
+            ├── select/
+            │   ├── deserto.mcfunction
+            │   ├── savana.mcfunction
+            │   └── snowy_race.mcfunction
+            ├── loot_tables/
+            │   └── player_name.json
+            └── circuits/
+                ├── deserto/
+                │   ├── load.mcfunction
+                │   ├── start.mcfunction
+                │   ├── tick.mcfunction
+                │   ├── sector1.mcfunction
+                │   ├── sector2.mcfunction
+                │   ├── sector3.mcfunction
+                │   ├── finish.mcfunction
+                │   ├── setup_semaphore.mcfunction
+                │   ├── show_records.mcfunction
+                │   ├── show_pb.mcfunction
+                │   ├── reset_pb.mcfunction
+                │   ├── reset_pb_all.mcfunction
+                │   ├── reset_wr.mcfunction
+                │   └── dashboard/
+                │       ├── bossbar_setup.mcfunction
+                │       ├── show.mcfunction
+                │       └── update.mcfunction
+                ├── savana/
+                │   ├── load.mcfunction
+                │   ├── start.mcfunction
+                │   ├── tick.mcfunction
+                │   ├── sector1.mcfunction
+                │   ├── sector2.mcfunction
+                │   ├── finish.mcfunction
+                │   ├── setup_semaphore.mcfunction
+                │   ├── show_records.mcfunction
+                │   ├── show_pb.mcfunction
+                │   ├── reset_pb.mcfunction
+                │   ├── reset_pb_all.mcfunction
+                │   ├── reset_wr.mcfunction
+                │   └── dashboard/
+                │       ├── bossbar_setup.mcfunction
+                │       ├── show.mcfunction
+                │       └── update.mcfunction
+                └── snowy_race/
+                    ├── load.mcfunction
+                    ├── start.mcfunction
+                    ├── tick.mcfunction
+                    ├── sector1.mcfunction
+                    ├── sector2.mcfunction
+                    ├── sector3.mcfunction
+                    ├── sector4.mcfunction
+                    ├── finish.mcfunction
+                    ├── setup_semaphore.mcfunction
+                    ├── show_records.mcfunction
+                    ├── show_pb.mcfunction
+                    ├── reset_pb.mcfunction
+                    ├── reset_pb_all.mcfunction
+                    ├── reset_wr.mcfunction
+                    ├── dashboard/
+                    │   ├── bossbar_setup.mcfunction
+                    │   ├── show.mcfunction
+                    │   └── update.mcfunction
+                    └── lever/
+                        └── lever_1.mcfunction
+
+TOTALE FILE: 67
+- 1 pack.mcmeta
+- 2 tag files (load.json, tick.json)
+- 64 function files (.mcfunction)
+- 1 loot table file (player_name.json)
+
+STRUTTURA PER TIPO:
+==================
+- Core functions: 20 file
+- Circuit functions: 47 file
+- Tag files: 2 file
+- Loot table: 1 file
+- Pack metadata: 1 file
+
+CIRCUITI DISPONIBILI:
+====================
+1. DESERTO (14 file + 3 dashboard)
+2. SAVANA (12 file + 3 dashboard)
+3. SNOWY RACE (15 file + 3 dashboard + 1 lever)
+
+NUOVE FUNZIONALITÀ AGGIUNTE:
+============================
+- admin_menu.mcfunction: Menu amministrativo
+- test_formatting.mcfunction: Test per la formattazione del tempo
+- format_time.mcfunction: Formattazione del tempo
+- starting_grid/: Sistema griglia di partenza
+- show_pb.mcfunction: Visualizzazione personal best
+- reset_pb.mcfunction: Reset personal best
+- reset_pb_all.mcfunction: Reset tutti i personal best
+- reset_wr.mcfunction: Reset world record
+- lever/: Sistema leve per snowy_race 
