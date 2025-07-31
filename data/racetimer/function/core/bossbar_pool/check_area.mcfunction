@@ -5,7 +5,7 @@
 scoreboard players set #in_circuit_area costanti 0
 
 # DESERTO
-execute if entity @s[tag=partito_deserto] if entity @s[x=-1718,y=60,z=-911,dx=260,dy=40,dz=428] run scoreboard players set #in_circuit_area costanti 1
+execute if entity @s[tag=partito_deserto] if entity @s[x=-1718,y=40,z=-911,dx=260,dy=50,dz=428] run scoreboard players set #in_circuit_area costanti 1
 
 # SAVANA - SOSTITUISCI con le tue coordinate
 # execute if entity @s[tag=partito_savana] if entity @s[x=X_MIN,y=Y_MIN,z=Z_MIN,dx=DX,dy=DY,dz=DZ] run scoreboard players set #in_circuit_area costanti 1

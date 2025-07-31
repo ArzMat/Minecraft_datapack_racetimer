@@ -120,5 +120,7 @@ scoreboard objectives add wr_centesimi dummy
 scoreboard objectives add pb_minuti dummy
 scoreboard objectives add pb_secondi dummy
 scoreboard objectives add pb_centesimi dummy
+scoreboard objectives add wr_tot_minuti dummy
+scoreboard objectives add pb_tot_minuti dummy
 
 tellraw @a ["",{"text":"[Racing Timer]","color":"yellow"},{"text":" Loaded successfully!","color":"white"}]

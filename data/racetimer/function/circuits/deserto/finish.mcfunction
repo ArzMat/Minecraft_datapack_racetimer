@@ -143,6 +143,9 @@ execute if score #is_wr costanti matches 0 if score #is_pb costanti matches 1 if
 # Tempo normale
 execute if score #is_pb costanti matches 0 if score #is_wr costanti matches 0 run tellraw @a ["",{"text":"TEMPO TOTALE: ","color":"green","bold":true},{"score":{"name":"@s","objective":"minuti"},"color":"yellow","bold":true},{"text":":","color":"yellow","bold":true},{"score":{"name":"@s","objective":"sec_decine"},"color":"yellow","bold":true},{"score":{"name":"@s","objective":"sec_unita"},"color":"yellow","bold":true},{"text":".","color":"yellow","bold":true},{"score":{"name":"@s","objective":"cent_decine"},"color":"yellow","bold":true},{"score":{"name":"@s","objective":"cent_unita"},"color":"yellow","bold":true}]
 
+# Rilascia la bossbar
+function racetimer:core/bossbar_pool/release
+
 # Reset tags
 tag @s remove settore3_deserto
 tag @s remove partito_deserto
